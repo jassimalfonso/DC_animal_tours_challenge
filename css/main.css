@@ -62,6 +62,7 @@ header {
 
 main {
 	min-width: 42.2em;
+	margin: 0 auto;
 }
 
 .container {
@@ -76,21 +77,90 @@ main {
 	flex-direction: column;
 	align-items: center;
 	width: 27em;
-	margin-bottom: 8.3em;
+	margin-bottom: 7.5em;
 }
 
 .card-container img {
-	width: 3em;
-	height: 3em;
+	width: 5em;
+	height: 5em;
+	margin-bottom: 2.5em;
 }
 
 .card-container h2 {
 	font-size: 3.2rem;
 	font-weight: bold;
+	margin-bottom: 2.5rem;
 }
 
 .card-container p {
 	font-size: 1.8rem;
 	font-weight: normal;
 	text-align: center;
+}
+
+/* For Tablet Size */
+@media only screen and (min-width: 834px) {
+
+	.heading h1 {
+		font-size: 5em;
+		margin-top: 80px;
+	}
+
+	.heading p {
+		font-size: 2.4rem;
+		width: 600px;
+	}
+
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header-wrapper {
+		padding: 0;
+	}
+
+	.image-wrapper img:nth-of-type(2), img:nth-of-type(3) {
+		display: inline-block;
+	}
+	.image-wrapper {
+		display: flex;
+		justify-content: center;
+		align-content: flex-end;
+		gap: 3.4em;
+		padding: 5em;
+	}
+
+	.image-wrapper img {
+		width: 19.5em;
+		height: 14.9em;
+	}
+
+	.image-wrapper img:nth-of-type(2) {
+		position: relative;
+		top: 100px;
+	}
+
+	.container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 700px;
+		align-items: center;
+	}
+
+	.container .card-container {
+		align-items: flex-start;
+
+	}
+
+	.container .card-container:nth-of-type(1) {
+		width: 100%;
+		flex-grow: 1;
+	}
+
+	.container .card-container p {
+		text-align: left;
+	}
 }
